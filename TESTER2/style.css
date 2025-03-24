@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light); /* buat ingport ya bebeb */
+
+/* PADIL MENOLAK WIBU AKU BUTUH CEWE YANG LIAT SOURCE CODE INI PLIS CARIIN GUA CEWEEE */
+@-webkit-keyframes throb { /* buat animations */
+  0% {
+    -webkit-transform: scale(1);
+  }
+  35% {
+    -webkit-transform: scale(1.2);
+  }
+  85% {
+    -webkit-transform: scale(1);
+  }
+}
+
+html {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  table-layout: fixed;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Shadows Into Light';
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 90vmin;
+  height: 90vmin;
+  position: relative;
+  margin: 5vmin auto;
+}
+
+div.throb {
+  -webkit-animation: throb 0.5s infinite;
+  animation: throb 0.5s infinite;
+  animation-delay: 0.8s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  width: 30vmin;
+  height: 30vmin;
+  line-height: 30vmin;
+  display: inline-block;
+  position: absolute;
+  font-size: 30vmin;
+  text-align: center;
+  transition: all 1s ease;
+}
+
+label {
+  text-shadow: 3vmin 3vmin 10vmin rgba(0, 0, 0, 0.5);
+}
+
+label:hover {
+  color: #c32a2a;
+  cursor: pointer;
+}
+
+#cek1 + label,
+#cek2 + label {
+  border-radius: 50%;
+  top: 0;
+}
+
+#cek1:checked + label,
+#cek2:checked + label,
+#cek3:checked + label {
+  background: #c32a2a;
+  font-size: 0;
+  transition: all 1s ease;
+}
+
+#cek1 + label {
+  left: 0;
+}
+
+#cek2 + label {
+  right: 10vmin;
+}
+
+#cek1:checked + label,
+#cek2:checked + label {
+  width: 54vmin;
+  height: 54vmin;
+  border-radius: 50%;
+  line-height: 54vmin;
+}
+
+#cek2:checked + label {
+  right: 0;
+}
+
+#cek3 + label {
+  bottom: 5vmin;
+  left: 50%;
+  margin: 0 -9vmin;
+  background-color: white;
+}
+
+#cek3:checked + label {
+  width: 49.5vmin;
+  height: 49.5vmin;
+  bottom: 17.28vmin;
+  left: 29.16vmin;
+  transform: rotate(45deg);
+  line-height: 4.86vmin;
+}
+
+
+.watermark {
+  margin: auto;
+  top: 5px;
+  left: 25%;
+  display: block;
+  position: absolute;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  text-align: center;
+}
+
+.kalimat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3vmin;
+  z-index: -1;
+  color: #000;
+}
+
+/*media untuk responsibilitas di hape sigma*/
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    width: 80vmin;
+    height: 80vmin;
+  }
+
+  /*sesuain font biar bida diliat masa doi kalian disuruh kek china cihuy*/
+  input[type="checkbox"] + label {
+    font-size: 20vmin;
+    width: 20vmin;
+    height: 20vmin;
+    line-height: 20vmin;
+  }
+
+  #cek1 + label,
+  #cek2 + label {
+    font-size: 25vmin;
+  }
+
+  #cek3 + label {
+    bottom: 4vmin;
+    left: 50%;
+    margin: 0 -6vmin;
+    background-color: white;
+  }
+
+  #cek3:checked + label {
+    width: 45vmin;
+    height: 45vmin;
+    bottom: 12vmin;
+    left: 28vmin;
+    transform: rotate(45deg);
+    line-height: 5vmin;
+  }
+
+  .kalimat {
+    font-size: 4vmin;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /*buat penyesuaian di layar hape*/
+  .wrapper {
+    width: 70vmin;
+    height: 70vmin;
+  }
+
+/*sesuaikan ukuran hapee yang model sekarang*/
+  input[type="checkbox"] + label {
+    font-size: 16vmin;
+    width: 16vmin;
+    height: 16vmin;
+    line-height: 16vmin;
+  }
+
+  #cek1 + label,
+  #cek2 + label {
+    font-size: 20vmin;
+  }
+
+  #cek3 + label {
+    bottom: 3vmin;
+    left: 50%;
+    margin: 0 -5vmin;
+    background-color: white;
+  }
+
+  #cek3:checked + label {
+    width: 40vmin;
+    height: 40vmin;
+    bottom: 10vmin;
+    left: 30vmin;
+    transform: rotate(45deg);
+    line-height: 3vmin;
+  }
+
+  .kalimat {
+    font-size: 5vmin;
+  }
+}
+
+/*ini buat biar smartphone bisa liat atau responsve lah skibidi ga tuh*/
+@media only screen and (max-width: 320px) {
+  input[type="checkbox"] + label {
+    font-size: 18vmin;
+    width: 18vmin;
+    height: 18vmin;
+    line-height: 18vmin;
+  }
+
+  #cek1 + label,
+  #cek2 + label {
+    font-size: 22vmin;
+  }
+
+  #cek3 + label {
+    bottom: 2vmin;
+    left: 50%;
+    margin: 0 -4vmin;
+    background-color: white;
+  }
+
+  #cek3:checked + label {
+    width: 35vmin;
+    height: 35vmin;
+    bottom: 8vmin;
+    left: 32vmin;
+    transform: rotate(45deg);
+    line-height: 2vmin;
+  }
+
+  .kalimat {
+    font-size: 6vmin;
+  }
+}

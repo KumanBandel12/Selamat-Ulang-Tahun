@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luv u</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- HTML FORM  -->
+<body>
+
+  <header>
+    <audio id="lagu" src="lagubuatcewemerinding.mp3"></audio> <!--tambah lagu disini supaya bisa diakses di script-->
+  </header>
+
+
+   <!-- script-->
+   <script>
+    window.addEventListener('click', () => {
+      document.getElementById("lagu").play();
+  });
+
+  function check() { //function menampilkan bentuk kotak bulat dan segitiga
+  if ( document.forms[0].elements[0].checked == true && document.forms[0].elements[1].checked == true && document.forms[0].elements[2].checked == true ) {
+  if ( ! $('.wrapper').hasClass('throb')) {
+        $('.wrapper').addClass('throb');
+    } 
+  } else {
+    if ($('.wrapper').hasClass('throb')) {
+        $('.wrapper').removeClass('throb');
+    }
+  }
+ }
+  </script>
+
+<!--form html-->
+    <form>
+        <div class="wrapper">
+          <input type="checkbox" id="cek1" onClick="check()"/>
+          <label for="cek1">Aku</label>
+          <input type="checkbox" id="cek2" onClick="check()"/>
+          <label for="cek2">Sayang</label>
+          <input type="checkbox" id="cek3" onClick="check()"/>
+          <label for="cek3">Kamu</label>
+        </div>
+
+        <div class="kalimat">
+            KLIK DIMANA SAJA UNTUK MENGEHIDUPKAN LAGU
+        </div>
+        </form>
+
+
+</body>
+</html>
